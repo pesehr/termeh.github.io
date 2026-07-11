@@ -235,6 +235,7 @@ a {
   display: grid;
   grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1fr);
   gap: clamp(28px, 6vw, 88px);
+  align-items: center;
   background: #ffffff;
   border-bottom: 1px solid var(--line);
 }
@@ -245,7 +246,32 @@ a {
   font-size: clamp(1.8rem, 3vw, 3rem);
 }
 
-.intro p:last-child {
+.profile-card {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  padding: 22px;
+  background: #f8faf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.profile-photo {
+  margin: 0;
+}
+
+.profile-photo img {
+  display: block;
+  width: 190px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.profile-card p {
   margin: 0;
   color: var(--muted);
   font-size: 1.08rem;
@@ -728,6 +754,7 @@ a {
   }
 
   .intro,
+  .profile-card,
   .timeline-item,
   .resume-grid,
   .credential-layout,
@@ -819,6 +846,10 @@ a {
   .finding-grid article,
   .impact-list div {
     padding: 22px;
+  }
+
+  .profile-photo img {
+    width: 160px;
   }
 
   .hero h1 {
